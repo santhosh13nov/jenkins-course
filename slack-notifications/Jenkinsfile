@@ -18,7 +18,7 @@ node {
        slackSend (baseUrl: 'https://hooks.slack.com/services/', 
                  channel: '#jenkins-slack', 
                  color: '#439FE0', 
-                 message: "Failed: ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)",
+                  message: "Failed: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})",
                  teamDomain: 'devopsshahu', 
                  tokenCredentialId: 'slack_alerts')
 
